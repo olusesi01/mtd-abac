@@ -1,0 +1,33 @@
+[
+    {
+        "uid": "policy_1",
+        "description": "Allow access to documents if the user department matches and the access method is view",
+        "effect": "allow",
+        "rules": {
+            "subject": {
+                "$.department": {
+                    "condition": "Equals",
+                    "value": "sales"
+                }
+            },
+            "resource": {
+                "$.type": {
+                    "condition": "Equals",
+                    "value": "document"
+                }
+            },
+            "action": {
+                "$.method": {
+                    "condition": "Equals",
+                    "value": "view"
+                }
+            }
+        },
+        "targets": {
+            "subject_id": "*.department",
+            "resource_id": "*.type",
+            "action_id": "*.method"
+        },
+        "priority": 0
+    }
+]

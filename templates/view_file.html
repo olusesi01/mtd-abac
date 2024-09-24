@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e9f5ff;
+        }
+
+        td {
+            color: #555;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Details</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <td>{{ file.id }}</td>
+        </tr>
+        <tr>
+            <th>DistrictCode</th>
+            <td>{{ file.DistrictCode }}</td>
+        </tr>
+        <tr>
+            <th>SchoolCode</th>
+            <td>{{ file.SchoolCode }}</td>
+        </tr>
+        <tr>
+            <th>CountyName</th>
+            <td>{{ file.CountyName }}</td>
+        </tr>
+        <tr>
+            <th>DistrictName</th>
+            <td>{{ file.DistrictName }}</td>
+        </tr>
+        <tr>
+            <th>SchoolName</th>
+            <td>{{ file.SchoolName }}</td>
+        </tr>
+        <tr>
+            <th>ClassID</th>
+            <td>{{ file.ClassID }}</td>
+        </tr>
+        <tr>
+            <th>CourseCode</th>
+            <td>{{ file.CourseCode }}</td>
+        </tr>
+        <tr>
+            <th>GradeLevelCode</th>
+            <td>{{ file.GradeLevelCode }}</td>
+        </tr>
+        <tr>
+            <th>GenderCode</th>
+            <td>{{ file.GenderCode }}</td>
+        </tr>
+        <tr>
+            <th>EnrollNoEthRptd</th>
+            <td>{{ file.EnrollNoEthRptd }}</td>
+        </tr>
+        <tr>
+            <th>EnrollAmInd</th>
+            <td>{{ file.EnrollAmInd }}</td>
+        </tr>
+        <tr>
+            <th>EnrollAsian</th>
+            <td>{{ file.EnrollAsian }}</td>
+        </tr>
+        <tr>
+            <th>EnrollPacIsl</th>
+            <td>{{ file.EnrollPacIsl }}</td>
+        </tr>
+        <tr>
+            <th>EnrollFilipino</th>
+            <td>{{ file.EnrollFilipino }}</td>
+        </tr>
+        <tr>
+            <th>EnrollHispanic</th>
+            <td>{{ file.EnrollHispanic }}</td>
+        </tr>
+        <tr>
+            <th>EnrollAfrAm</th>
+            <td>{{ file.EnrollAfrAm }}</td>
+        </tr>
+        <tr>
+            <th>EnrollWhite</th>
+            <td>{{ file.EnrollWhite }}</td>
+        </tr>
+        <tr>
+            <th>EnrollTwoOrMore</th>
+            <td>{{ file.EnrollTwoOrMore }}</td>
+        </tr>
+        <tr>
+            <th>EnrollTotal</th>
+            <td>{{ file.EnrollTotal }}</td>
+        </tr>
+        <tr>
+            <th>EnrollEl</th>
+            <td>{{ file.EnrollEl }}</td>
+        </tr>
+        <tr>
+            <th>GenderCode</th>
+            <td>{{ file.GenderCode }}</td>
+        </tr>
+        <tr>
+            <th>Content</th>
+            <td>{{ file.Content }}</td>
+        </tr>
+    </table>
+    <a href="{{ url_for('file_list') }}">Back to File List</a>
+</body>
+</html>
